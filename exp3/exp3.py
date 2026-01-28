@@ -11,7 +11,7 @@ import seaborn as sns
 print("Training data shape:", X_train.shape)
 print("Test data shape:", X_test.shape)
 image_no = 10
-plt.imshow(X_train[image_no], cmap="gray")
+plt.imshow(X_train[image_no])
 plt.title(f"Label: {y_train[image_no]}")
 plt.axis("off")
 plt.show()
@@ -46,7 +46,7 @@ print(f"\nTest Accuracy: {test_accuracy:.4f}")
 y_pred_probs = model.predict(X_test_scaled)
 y_pred_labels = np.argmax(y_pred_probs, axis=1)
 image_no = 15
-plt.imshow(X_test[image_no], cmap="gray")
+plt.imshow(X_test[image_no])
 plt.title(f"True: {y_test[image_no]} | Predicted: {y_pred_labels[image_no]}")
 plt.axis("off")
 plt.show()
